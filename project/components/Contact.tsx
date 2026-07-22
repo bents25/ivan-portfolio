@@ -45,7 +45,7 @@ const links = [
     icon: WhatsAppIcon,
     label: 'WhatsApp',
     description: '+63 950 516 9307',
-    href: 'https://wa.me/639505169307',
+    href: 'https://api.whatsapp.com/send?phone=639505169307',
     color: '#25D366',
     gradient: 'from-[#25D366] to-[#128C7E]',
     external: true,
@@ -159,7 +159,7 @@ export default function Contact() {
               Send Me a Message
             </a>
             <a
-              href="https://wa.me/639505169307"
+              href="https://api.whatsapp.com/send?phone=639505169307"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl font-semibold text-base text-white transition-all duration-300 hover:-translate-y-0.5"
