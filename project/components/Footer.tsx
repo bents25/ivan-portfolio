@@ -32,7 +32,7 @@ function OnlineJobsIcon({ className }: { className?: string }) {
 
 const socialLinks = [
   { icon: Mail, href: 'mailto:siaoivan@gmail.com', label: 'Email', external: false },
-  { icon: WhatsAppIcon, href: 'https://wa.me/639505169307', label: 'WhatsApp', external: true },
+  { icon: WhatsAppIcon, href: 'https://api.whatsapp.com/send?phone=639505169307', label: 'WhatsApp', external: true },
   { icon: Linkedin, href: 'https://www.linkedin.com/in/ivan-xavier-siao', label: 'LinkedIn', external: true },
   { icon: Briefcase, href: 'https://www.upwork.com/freelancers/~01147a82ca574ff971?mp_source=share', label: 'Upwork', external: true },
   { icon: OnlineJobsIcon, href: 'https://www.onlinejobs.ph/jobseekers/info/4092762', label: 'OnlineJobs.ph', external: true },
@@ -67,7 +67,7 @@ export default function Footer() {
               AI Automation Specialist building intelligent workflows that save businesses hours every week.
             </p>
             <a
-              href="https://wa.me/639505169307"
+              href="https://api.whatsapp.com/send?phone=639505169307"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-foreground/50 hover:text-foreground text-sm transition-colors"
