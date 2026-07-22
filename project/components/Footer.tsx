@@ -64,7 +64,7 @@ export default function Footer() {
               <span className="font-bold text-foreground">Ivan Xavier Siao</span>
             </div>
             <p className="text-foreground/40 text-sm leading-relaxed mb-4">
-              AI Automation Engineer building intelligent workflows that save businesses hours every week.
+              AI Automation Specialist building intelligent workflows that save businesses hours every week.
             </p>
             <a
               href="https://wa.me/639505169307"
@@ -127,7 +127,7 @@ export default function Footer() {
           <p className="text-foreground/30 text-sm">
             &copy; {new Date().getFullYear()} Ivan Xavier Siao. All rights reserved.
           </p>
-          <p className="text-foreground/20 text-xs">AI Automation Engineer</p>
+          <p className="text-foreground/20 text-xs">AI Automation Specialist</p>
           <button
             onClick={scrollToTop}
             className="w-10 h-10 rounded-xl glass-card border border-foreground/10 flex items-center justify-center text-foreground/50 hover:text-foreground hover:border-[#4F46E5]/50 transition-all duration-200 group"
