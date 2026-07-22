@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "slug": "end-to-end-ai-sales-automation",
+    "title": "End-to-End AI Sales Automation System",
+    "shortDescription": "A complete AI-powered sales automation workflow that captures leads, qualifies prospects, enriches contact data, updates CRM records, generates personalized outreach emails, and automates follow-up sequences.",
+    "image": "/images/projects/project1/Workflow_Full_Overview_Enhanced.png",
+    "problem": "Sales teams waste hours manually qualifying leads, researching prospects, updating CRMs, and writing outreach emails.",
+    "solution": "This workflow automates the entire lead qualification process from form submission to personalized outreach.",
+    "features": [
+      "AI Lead Qualification",
+      "Lead Scoring",
+      "CRM Automation",
+      "Contact Enrichment",
+      "Email Personalization",
+      "Google Sheets Integration",
+      "Webhook Triggers",
+      "Error Handling",
+      "Automated Follow-ups"
+    ],
+    "impact": [
+      "Reduces manual sales work",
+      "Speeds up response time",
+      "Improves lead quality",
+      "Scales outbound sales"
+    ],
+    "stack": ["n8n", "OpenAI", "Groq", "Google Sheets", "Webhooks", "REST APIs", "JSON"],
+    "category": "Sales Automation"
+  },
+  {
+    "id": 2,
+    "slug": "ai-email-support-agent",
+    "title": "AI Email Support Agent",
+    "shortDescription": "An intelligent email assistant that reads incoming customer emails, understands intent using AI, drafts professional responses, categorizes support requests, and routes complex conversations to human agents.",
+    "image": "/images/projects/project2/AI_Email_Chat_Support_Agent.png",
+    "problem": "Businesses spend significant time replying to repetitive customer emails.",
+    "solution": "AI analyzes every email and prepares an accurate response while keeping humans involved when necessary.",
+    "features": [
+      "Intent Detection",
+      "Email Categorization",
+      "AI Response Generation",
+      "Priority Detection",
+      "Human Escalation",
+      "Error Handling"
+    ],
+    "impact": [
+      "Faster customer support",
+      "Consistent responses",
+      "Reduced workload"
+    ],
+    "stack": ["n8n", "OpenAI", "Gmail", "Google Workspace", "Webhooks"],
+    "category": "Customer Support"
+  },
+  {
+    "id": 3,
+    "slug": "real-estate-lead-qualification",
+    "title": "Real Estate Lead Qualification System",
+    "shortDescription": "An AI workflow that evaluates real estate inquiries, scores lead quality, collects missing information, and prepares qualified prospects for agents.",
+    "image": "/images/projects/project3/Real_Estate_Lead_Qualification_System.png",
+    "problem": "Agents waste valuable time chasing unqualified leads.",
+    "solution": "AI automatically determines buying intent and prioritizes high-value prospects.",
+    "features": [
+      "Lead Qualification",
+      "AI Chat",
+      "Buyer Intent Analysis",
+      "Lead Scoring",
+      "CRM Updates",
+      "Email Follow-up"
+    ],
+    "impact": [
+      "Higher conversion rates",
+      "Faster response",
+      "Better pipeline management"
+    ],
+    "stack": ["n8n", "OpenAI", "Google Sheets", "Webhook"],
+    "category": "Real Estate"
+  },
+  {
+    "id": 4,
+    "slug": "veterinary-clinic-ai-receptionist",
+    "title": "Veterinary Clinic AI Receptionist",
+    "shortDescription": "An AI receptionist designed for veterinary clinics that answers common client questions, shares clinic information, assists with appointment booking, and escalates urgent situations when necessary.",
+    "image": "/images/projects/project4/Veterinary_AI_Receptionist.png",
+    "problem": "Receptionists spend time answering repetitive questions while handling in-clinic responsibilities.",
+    "solution": "An AI assistant provides instant responses 24/7 while directing emergencies and appointment requests appropriately.",
+    "features": [
+      "AI Chat",
+      "Appointment Assistance",
+      "Knowledge Base",
+      "Emergency Guidance",
+      "Human Handoff",
+      "Clinic Information"
+    ],
+    "impact": [
+      "24/7 customer support",
+      "Reduced receptionist workload",
+      "Improved client experience"
+    ],
+    "stack": ["n8n", "OpenAI", "Google Docs Knowledge Base", "Webhook"],
+    "category": "Healthcare"
+  }
+]
