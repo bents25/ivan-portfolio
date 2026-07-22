@@ -57,7 +57,10 @@ function WorkflowCanvas() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       animFrame++;
 
-      // Draw particles
+      const isDark = document.documentElement.classList.contains('dark');
+      const labelColor = isDark ? 'rgba(255,255,255,0.6)' : 'rgba(79,70,229,0.65)';
+      const edgeColor = isDark ? 'rgba(79,70,229,0.15)' : 'rgba(79,70,229,0.25)';
+
       particles.forEach(p => {
         p.x += p.vx;
         p.y += p.vy;
@@ -72,7 +75,6 @@ function WorkflowCanvas() {
       const w = canvas.width;
       const h = canvas.height;
 
-      // Draw edges with animated data packets
       edges.forEach(([from, to]) => {
         const a = nodes[from];
         const b = nodes[to];
@@ -82,11 +84,10 @@ function WorkflowCanvas() {
         ctx.beginPath();
         ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
-        ctx.strokeStyle = 'rgba(79,70,229,0.15)';
+        ctx.strokeStyle = edgeColor;
         ctx.lineWidth = 1;
         ctx.stroke();
 
-        // Animated data packet
         const progress = ((animFrame * 0.4 + from * 30 + to * 20) % 100) / 100;
         const px = x1 + (x2 - x1) * progress;
         const py = y1 + (y2 - y1) * progress;
@@ -98,14 +99,12 @@ function WorkflowCanvas() {
         ctx.globalAlpha = 1;
       });
 
-      // Draw nodes
       nodes.forEach(node => {
         const x = node.x * w;
         const y = node.y * h;
         const t = animFrame * 0.02 + node.pulse;
         const pulse = Math.sin(t) * 0.3 + 0.7;
 
-        // Glow
         const grd = ctx.createRadialGradient(x, y, 0, x, y, 28);
         grd.addColorStop(0, node.color + '30');
         grd.addColorStop(1, 'transparent');
@@ -116,7 +115,6 @@ function WorkflowCanvas() {
         ctx.fill();
         ctx.globalAlpha = 1;
 
-        // Node circle
         ctx.beginPath();
         ctx.arc(x, y, 10, 0, Math.PI * 2);
         ctx.fillStyle = node.color + 'CC';
@@ -125,9 +123,8 @@ function WorkflowCanvas() {
         ctx.fill();
         ctx.stroke();
 
-        // Label
         ctx.font = '10px system-ui';
-        ctx.fillStyle = 'rgba(255,255,255,0.6)';
+        ctx.fillStyle = labelColor;
         ctx.textAlign = 'center';
         ctx.fillText(node.label, x, y + 22);
       });
@@ -145,8 +142,8 @@ function WorkflowCanvas() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full opacity-40"
-      style={{ pointerEvents: 'none' }}
+      className="absolute inset-0 w-full h-full"
+      style={{ pointerEvents: 'none', opacity: 'var(--canvas-opacity)' }}
     />
   );
 }
@@ -165,9 +162,9 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-[#050816]">
-        <div className="absolute inset-0 bg-gradient-radial from-[#4F46E5]/10 via-transparent to-transparent" style={{ backgroundPosition: '30% 40%' }} />
-        <div className="absolute inset-0 bg-gradient-radial from-[#00E5FF]/5 via-transparent to-transparent" style={{ backgroundPosition: '70% 60%' }} />
+      <div className="absolute inset-0 bg-background">
+        <div className="absolute inset-0" style={{ background: `radial-gradient(circle at 30% 40%, var(--hero-gradient-1), transparent)` }} />
+        <div className="absolute inset-0" style={{ background: `radial-gradient(circle at 70% 60%, var(--hero-gradient-2), transparent)` }} />
       </div>
 
       {/* Workflow animation canvas */}
@@ -175,9 +172,9 @@ export default function Hero() {
 
       {/* Grid overlay */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(var(--grid-color) 1px, transparent 1px), linear-gradient(90deg, var(--grid-color) 1px, transparent 1px)`,
           backgroundSize: '60px 60px',
         }}
       />
@@ -192,7 +189,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-[#4F46E5]/30 mb-8 text-sm font-medium"
         >
           <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse" />
-          <span className="text-white/70">Available for new projects</span>
+          <span className="text-foreground/70">Available for new projects</span>
         </motion.div>
 
         {/* Headline */}
@@ -215,7 +212,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="text-white/60 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed mb-10"
+          className="text-foreground/60 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed mb-10"
         >
           I design intelligent workflows using AI and n8n to automate lead qualification,
           customer support, CRM updates, email communication, and business operations.
@@ -257,7 +254,7 @@ export default function Hero() {
           ].map(stat => (
             <div key={stat.label} className="text-center">
               <div className="text-3xl font-bold text-gradient-primary">{stat.value}</div>
-              <div className="text-white/50 text-sm mt-1">{stat.label}</div>
+              <div className="text-foreground/50 text-sm mt-1">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -268,7 +265,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-foreground/30"
       >
         <span className="text-xs tracking-widest uppercase">Scroll</span>
         <motion.div

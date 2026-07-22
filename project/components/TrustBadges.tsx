@@ -30,7 +30,7 @@ export default function TrustBadges() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-white/40 text-sm font-medium tracking-widest uppercase"
+          className="text-foreground/40 text-sm font-medium tracking-widest uppercase"
         >
           Technologies &amp; Integrations
         </motion.p>
@@ -76,7 +76,7 @@ function BadgeChip({ label, accent }: { label: string; accent?: boolean }) {
       className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap glass-card border transition-colors ${
         accent
           ? 'border-[#00E5FF]/20 text-[#00E5FF]/80'
-          : 'border-[#4F46E5]/25 text-white/70'
+          : 'border-[#4F46E5]/25 text-foreground/70'
       }`}
     >
       {label}

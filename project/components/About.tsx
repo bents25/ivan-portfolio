@@ -69,12 +69,12 @@ export default function About() {
                 priority
               />
               {/* Bottom gradient overlay */}
-              <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#050816]/60 to-transparent z-10" />
+              <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background/30 to-transparent z-10" />
             </div>
 
             {/* Name card below photo */}
-            <div className="mt-4 glass-card rounded-xl px-5 py-3 border border-white/10 w-full text-center lg:text-left">
-              <div className="font-bold text-white text-base">Ivan Xavier Siao</div>
+            <div className="mt-4 glass-card rounded-xl px-5 py-3 border border-foreground/10 w-full text-center lg:text-left">
+              <div className="font-bold text-foreground text-base">Ivan Xavier Siao</div>
               <div className="text-[#00E5FF] text-sm">AI Automation Engineer</div>
             </div>
           </motion.div>
@@ -86,7 +86,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <div className="space-y-5 text-white/60 text-base leading-relaxed mb-8">
+            <div className="space-y-5 text-foreground/60 text-base leading-relaxed mb-8">
               <p>
                 I specialize in building AI-powered automation systems using n8n and modern AI models.
                 My focus is creating practical workflows that eliminate repetitive tasks, improve operational
@@ -111,9 +111,9 @@ export default function About() {
                 { value: 'Webhook APIs', label: 'Integration Method' },
                 { value: '24/7 Systems', label: 'Deployment Target' },
               ].map(item => (
-                <div key={item.label} className="glass-card rounded-xl p-4 border border-white/8">
-                  <div className="text-white font-semibold text-sm">{item.value}</div>
-                  <div className="text-white/40 text-xs mt-1">{item.label}</div>
+                <div key={item.label} className="glass-card rounded-xl p-4 border border-foreground/8">
+                  <div className="text-foreground font-semibold text-sm">{item.value}</div>
+                  <div className="text-foreground/40 text-xs mt-1">{item.label}</div>
                 </div>
               ))}
             </div>
@@ -158,7 +158,7 @@ function SkillCard({ skill, index }: { skill: typeof skills[0]; index: number })
       >
         <Icon className="w-5 h-5" style={{ color: skill.color }} />
       </div>
-      <span className="text-white/75 text-xs font-medium leading-tight block">
+      <span className="text-foreground/75 text-xs font-medium leading-tight block">
         {skill.label}
       </span>
     </motion.div>

@@ -70,7 +70,7 @@ export default function AutomationProcess() {
             Automation{' '}
             <span className="text-gradient-accent">Process</span>
           </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+          <p className="text-foreground/50 text-lg max-w-2xl mx-auto">
             A structured approach from discovery to deployed, optimized automation.
           </p>
         </motion.div>
@@ -107,8 +107,8 @@ function ProcessStep({ step, index }: { step: typeof steps[0]; index: number }) 
       {/* Step number + icon */}
       <div className="relative flex flex-col items-center">
         {/* Number badge */}
-        <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#050816] border border-white/20 flex items-center justify-center z-10">
-          <span className="text-[9px] font-bold text-white/50">{index + 1}</span>
+        <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-background border border-foreground/20 flex items-center justify-center z-10">
+          <span className="text-[9px] font-bold text-foreground/50">{index + 1}</span>
         </div>
 
         {/* Icon circle */}
@@ -132,8 +132,8 @@ function ProcessStep({ step, index }: { step: typeof steps[0]; index: number }) 
       </div>
 
       <div className="mt-4 lg:mt-5 px-1">
-        <h3 className="text-sm font-bold text-white mb-2">{step.title}</h3>
-        <p className="text-white/45 text-xs leading-relaxed">{step.description}</p>
+        <h3 className="text-sm font-bold text-foreground mb-2">{step.title}</h3>
+        <p className="text-foreground/45 text-xs leading-relaxed">{step.description}</p>
       </div>
     </motion.div>
   );
