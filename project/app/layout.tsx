@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ivanxavier.dev'),
+  metadataBase: new URL('https://bents25-ivan-portfolio.vercel.app'),
   title: 'Ivan Xavier Siao | AI Automation Specialist',
   description:
     'I build AI automation systems using n8n and modern AI models to eliminate repetitive tasks, improve operational efficiency, and help businesses respond faster to customers.',
