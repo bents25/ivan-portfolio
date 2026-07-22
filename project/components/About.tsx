@@ -40,7 +40,7 @@ export default function About() {
             About Me
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold">
-            The Engineer{' '}
+            The Specialist{' '}
             <span className="text-gradient-primary">Behind</span>{' '}
             the Automation
           </h2>
@@ -62,7 +62,7 @@ export default function About() {
               <div className="absolute -inset-2 bg-gradient-to-br from-[#4F46E5]/30 via-transparent to-[#00E5FF]/20 rounded-3xl blur-xl -z-10" />
               <Image
                 src="/images/portfolio/portfolio_image.png"
-                alt="Ivan Xavier Siao — AI Automation Engineer"
+                alt="Ivan Xavier Siao — AI Automation Specialist"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 1024px) 288px, 340px"
@@ -75,7 +75,7 @@ export default function About() {
             {/* Name card below photo */}
             <div className="mt-4 glass-card rounded-xl px-5 py-3 border border-foreground/10 w-full text-center lg:text-left">
               <div className="font-bold text-foreground text-base">Ivan Xavier Siao</div>
-              <div className="text-[#00E5FF] text-sm">AI Automation Engineer</div>
+              <div className="text-[#00E5FF] text-sm">AI Automation Specialist</div>
             </div>
           </motion.div>
 
