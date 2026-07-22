@@ -24,7 +24,7 @@ const skills = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 relative">
+    <section id="about" className="py-16 sm:py-24 relative">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#4F46E5]/5 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,7 +34,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <span className="text-[#00E5FF] text-sm font-semibold tracking-widest uppercase mb-3 block">
             About Me
@@ -47,7 +47,7 @@ export default function About() {
         </motion.div>
 
         {/* Top row: photo + bio */}
-        <div className="grid lg:grid-cols-[340px_1fr] gap-12 items-start mb-16">
+        <div className="grid lg:grid-cols-[340px_1fr] gap-8 lg:gap-12 items-start mb-12 sm:mb-16">
           {/* Portrait */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

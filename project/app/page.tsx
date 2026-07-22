@@ -1,3 +1,4 @@
+import LoadingScreen from '@/components/LoadingScreen';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import TrustBadges from '@/components/TrustBadges';
@@ -14,6 +15,7 @@ export default function Home() {
 
   return (
     <main>
+      <LoadingScreen />
       <Navigation />
       <Hero />
       <TrustBadges />

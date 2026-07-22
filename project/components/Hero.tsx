@@ -159,7 +159,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-24 sm:py-20"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-background">
@@ -245,7 +245,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.55 }}
-          className="mt-16 flex flex-wrap justify-center gap-8 sm:gap-12"
+          className="mt-12 sm:mt-16 flex flex-wrap justify-center gap-8 sm:gap-12"
         >
           {[
             { value: '4+', label: 'AI Systems Built' },

@@ -90,7 +90,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
   const handleMouseUp = () => setIsDragging(false);
 
   return (
-    <section id="projects" className="py-24 relative">
+    <section id="projects" className="py-16 sm:py-24 relative">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#4F46E5]/5 blur-[80px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,7 +99,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <span className="text-[#00E5FF] text-sm font-semibold tracking-widest uppercase mb-3 block">
             Featured Work
@@ -118,7 +118,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          className="flex flex-col gap-10"
+          className="flex flex-col gap-6 sm:gap-10"
         >
           {projects.map((project, index) => (
             <ProjectCard
@@ -292,7 +292,7 @@ function ProjectCard({ project, index, onImageClick }: { project: Project; index
         </div>
 
         {/* Content */}
-        <div className={`p-8 lg:p-10 flex flex-col justify-between ${isEven ? '' : 'lg:col-start-1 lg:row-start-1'}`}>
+        <div className={`p-6 sm:p-8 lg:p-10 flex flex-col justify-between ${isEven ? '' : 'lg:col-start-1 lg:row-start-1'}`}>
           <div>
             <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3 leading-tight">
               {project.title}
@@ -354,7 +354,7 @@ function ProjectCard({ project, index, onImageClick }: { project: Project; index
         transition={{ duration: 0.4, ease: 'easeInOut' }}
         className="overflow-hidden"
       >
-        <div className="border-t border-foreground/8 p-8 lg:p-10">
+        <div className="border-t border-foreground/8 p-6 sm:p-8 lg:p-10">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Features */}
             <div>
