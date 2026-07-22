@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ivanxavier.dev'),
-  title: 'Ivan Xavier Siao | AI Automation Engineer',
+  title: 'Ivan Xavier Siao | AI Automation Specialist',
   description:
     'I build AI automation systems using n8n and modern AI models to eliminate repetitive tasks, improve operational efficiency, and help businesses respond faster to customers.',
   keywords: [
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     'CRM Automation',
     'Email Automation',
     'Lead Qualification',
-    'AI Engineer',
+    'AI Specialist',
   ],
   authors: [{ name: 'Ivan Xavier Siao' }],
   openGraph: {
-    title: 'Ivan Xavier Siao | AI Automation Engineer',
+    title: 'Ivan Xavier Siao | AI Automation Specialist',
     description:
       'I build AI automation systems that save businesses hours every week.',
     type: 'website',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ivan Xavier Siao | AI Automation Engineer',
+    title: 'Ivan Xavier Siao | AI Automation Specialist',
     description:
       'I build AI automation systems that save businesses hours every week.',
   },
