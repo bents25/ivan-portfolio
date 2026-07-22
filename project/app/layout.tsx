@@ -1,5 +1,5 @@
 import './globals.css';
-import type { Metadata, Viewport } from 'next';
+import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -16,38 +16,42 @@ export const metadata: Metadata = {
   description:
     'I build AI automation systems using n8n and modern AI models to eliminate repetitive tasks, improve operational efficiency, and help businesses respond faster to customers.',
   keywords: [
-    'AI Automation', 'n8n', 'Workflow Automation', 'OpenAI', 'Business Automation',
-    'CRM Automation', 'Email Automation', 'Lead Qualification', 'AI Engineer',
+    'AI Automation',
+    'n8n',
+    'Workflow Automation',
+    'OpenAI',
+    'Business Automation',
+    'CRM Automation',
+    'Email Automation',
+    'Lead Qualification',
+    'AI Engineer',
   ],
   authors: [{ name: 'Ivan Xavier Siao' }],
   openGraph: {
     title: 'Ivan Xavier Siao | AI Automation Engineer',
-    description: 'I build AI automation systems that save businesses hours every week.',
+    description:
+      'I build AI automation systems that save businesses hours every week.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Ivan Xavier Siao | AI Automation Engineer',
-    description: 'I build AI automation systems that save businesses hours every week.',
+    description:
+      'I build AI automation systems that save businesses hours every week.',
   },
   robots: {
     index: true,
     follow: true,
   },
+  themeColor: '#0a0e1a',
 };
 
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 5,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f8fafc' },
-    { media: '(prefers-color-scheme: dark)', color: '#0a0e1a' },
-  ],
-};
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body className={`${inter.className} antialiased bg-background text-foreground`}>
@@ -55,7 +59,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </ThemeProvider>
 
-        {/* Cal.com element-click embed */}
         <Script
           id="cal-embed"
           strategy="lazyOnload"
@@ -85,16 +88,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     p(cal, ar);
   };
 })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", "30min", { origin: "https://app.cal.com" });
+
+Cal("init", "30min", {
+  origin: "https://app.cal.com"
+});
+
 Cal.config = Cal.config || {};
 Cal.config.forwardQueryParams = true;
+
 Cal.ns["30min"]("ui", {
-  "cssVarsPerTheme": {
-    "light": { "cal-brand": "#1F2937" },
-    "dark": { "cal-brand": "#60A5FA" }
+  cssVarsPerTheme: {
+    light: {
+      "cal-brand": "#1F2937"
+    },
+    dark: {
+      "cal-brand": "#60A5FA"
+    }
   },
-  "hideEventTypeDetails": false,
-  "layout": "month_view"
+  hideEventTypeDetails: false,
+  layout: "month_view"
 });
             `,
           }}
