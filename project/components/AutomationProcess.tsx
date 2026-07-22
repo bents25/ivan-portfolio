@@ -52,7 +52,7 @@ const steps = [
 
 export default function AutomationProcess() {
   return (
-    <section id="process" className="py-24 relative overflow-hidden">
+    <section id="process" className="py-16 sm:py-24 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#00E5FF]/3 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,7 +61,7 @@ export default function AutomationProcess() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <span className="text-[#00E5FF] text-sm font-semibold tracking-widest uppercase mb-3 block">
             How I Work

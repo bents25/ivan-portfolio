@@ -77,7 +77,7 @@ export default function Navigation() {
           </button>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1">
             {navLinks.map(link => (
               <button
                 key={link.href}
@@ -102,7 +102,7 @@ export default function Navigation() {
 
           {/* Right side: CTA + Theme toggle + Mobile menu */}
           <div className="flex items-center gap-2">
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <button
                 onClick={() => scrollTo('#contact')}
                 className="btn-primary px-5 py-2 rounded-lg text-sm font-semibold"
@@ -124,7 +124,7 @@ export default function Navigation() {
 
             {/* Mobile toggle */}
             <button
-              className="md:hidden text-foreground/80 hover:text-foreground p-2"
+              className="lg:hidden text-foreground/80 hover:text-foreground p-2"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
               {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -141,7 +141,7 @@ export default function Navigation() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden bg-background/95 backdrop-blur-xl border-t border-foreground/5"
+            className="lg:hidden bg-background/95 backdrop-blur-xl border-t border-foreground/5"
           >
             <div className="px-4 py-4 flex flex-col gap-1">
               {navLinks.map(link => (
