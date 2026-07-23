@@ -36,7 +36,7 @@ const links = [
     icon: Mail,
     label: 'Email',
     description: 'siaoivan@gmail.com',
-    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=siaoivan@gmail.com',,
+    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=siaoivan@gmail.com',
     color: '#4F46E5',
     gradient: 'from-[#4F46E5] to-[#6366f1]',
     external: true,
